@@ -1,0 +1,14 @@
+- hosts: linux
+  become: yes
+  tasks:
+    - name: "Ensure group - jai"
+      group:
+       name: jai
+       state: present
+ 
+    - name: "Add the user - jai"
+      user:
+       name: omkar
+       comment: omkar
+       group: omkar
+       update_password: on_create
