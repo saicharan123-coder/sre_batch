@@ -1,0 +1,15 @@
+---
+- hosts: linux
+  become: yes
+  tasks:
+    - name: "Ensure group - Tridip"
+      group:
+       name: anjali
+       state: present
+
+    - name: "Add the user - Tridip"
+      user:
+       name: Tridip
+       comment: Tridip
+       group: Tridip
+       update_password: on_create
