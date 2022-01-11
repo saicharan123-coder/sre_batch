@@ -4,7 +4,7 @@
   tasks:
     - name: "Ensure group - amit"
       group:
-       name: jai
+       name: amit
        state: present
  
     - name: "Add the user - amit"
