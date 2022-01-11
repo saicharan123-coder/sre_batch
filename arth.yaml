@@ -1,0 +1,15 @@
+---
+- hosts: linux
+  become: yes
+  tasks:
+    - name: "Ensure group - arth"
+      group:
+       name: arth
+       state: present
+ 
+    - name: "Add the user - arth"
+      user:
+       name: arth
+       comment: arth
+       group: arth
+       update_password: on_create
