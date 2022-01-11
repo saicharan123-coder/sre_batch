@@ -2,12 +2,12 @@
 - hosts: linux
   become: yes
   tasks:
-    - name: "Ensure group - jai"
+    - name: "Ensure group - revathi"
       group:
        name: revathi
        state: present
  
-    - name: "Add the user - jai"
+    - name: "Add the user - revathi"
       user:
        name: revathi
        comment: revathi
